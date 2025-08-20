@@ -39,17 +39,21 @@ Official Source:
 
 in order to save time or for automation, here all the files you need. download all files below and run the model.
 
+for 12GB VRAM:
 
 Action  | link                                                                                                                              | save to
 ---     |---                                                                                                                                | ---
 GETFILE | https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_qwen_image.json   | ComfyUI/user/default/workflows
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors  | ComfyUI/models/diffusion_models/
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors | ComfyUI/models/diffusion_models/
-GETFILE | https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors  | ComfyUI/models/loras
+GETFILE | https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors  | ComfyUI/models/loras
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors | ComfyUI/models/vae
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors | ComfyUI/models/text_encoders
 
 
+The model used above is FP8, which works on 12GB VRAM already (16GB is better). if you have 24GB you can load the bf16 model from: https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models
+
+if you need gguf models you can find them here: https://huggingface.co/QuantStack/Qwen-Image-Distill-GGUF/tree/main
 
 
 ### Benchmark
@@ -75,7 +79,7 @@ Action  | link                                                                  
 ---     |---                                                                                                                                | ---
 GETFILE | https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_qwen_edit_safetensorGGUF.json               |ComfyUI/user/default/workflows
 GETFILE | https://huggingface.co/QuantStack/Qwen-Image-Edit-GGUF/resolve/main/Qwen_Image_Edit-Q6_K.gguf                                     |ComfyUI/models/unet
-GETFILE | https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.0.safetensors                    |ComfyUI/models/loras
+GETFILE | https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors                    |ComfyUI/models/loras
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors  |ComfyUI/models/text_encoders
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors  	                    |ComfyUI/models/vae  
 CLONEIT | https://github.com/city96/ComfyUI-GGUF                                                                                            |ComfyUI/custom_nodes 
@@ -97,9 +101,9 @@ You can switch between Text2Video and Image2Video by switching the model to be l
 Action  | link                                                                                                                              | save to
 ---     |---                                                                                                                                | ---
 GETFILE |https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_wan2.2-ti2v-aio_uncensored.json | ComfyUI/user/default/workflows
-GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-i2v-rapid-aio-v8.safetensors | ComfyUI/models/checkpoints/
-GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-t2v-rapid-aio-v8.1.safetensors | ComfyUI/models/checkpoints/
-GETFILE |https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors | core_rope/models/
+GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-i2v-rapid-aio-v8.safetensors | ComfyUI/models/checkpoints
+GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-t2v-rapid-aio-v8.1.safetensors | ComfyUI/models/checkpoints
+GETFILE |https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors | ComfyUI/models/clip_vision
 CLONEIT |https://github.com/city96/ComfyUI-GGUF | ComfyUI/custom_nodes
 m
 
