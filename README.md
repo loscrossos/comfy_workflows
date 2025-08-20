@@ -26,6 +26,23 @@ In my experience a good gguf has better quality on the same hardware. so i recco
 
 All Benchmarks on Torch 2.7.1, Sage-Attention 2.2. RTX 5060ti
 
+## Flux Krea Dev
+
+Krea has also a comfy workflow. here is a variation with GGUF instead.
+
+
+Action  | link                                                                                                      | save to
+---     |---                                                                                                        | ---
+GETFILE | https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_flux1_krea_dev.json | ComfyUI/user/default/workflows/
+GETFILE | https://huggingface.co/QuantStack/FLUX.1-Krea-dev-GGUF/resolve/main/flux1-krea-dev-Q8_0.gguf              | ComfyUI/models/unet
+GETFILE | https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/clip_l.safetensors                  | ComfyUI/models/text_encoders
+GETFILE | https://huggingface.co/comfyanonymous/flux_text_encoders/resolve/main/t5xxl_fp8_e4m3fn.safetensors        | ComfyUI/models/text_encoders
+GETFILE | https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/resolve/main/split_files/vae/ae.safetensors  | ComfyUI/models/vae
+CLONEIT | https://github.com/city96/ComfyUI-GGUF                                                                    | ComfyUI/custom_nodes 
+ 
+you can check all GGUFs here: https://huggingface.co/QuantStack/FLUX.1-Krea-dev-GGUF/
+
+
 ## Qwen Image
 
 
@@ -41,14 +58,14 @@ in order to save time or for automation, here all the files you need. download a
 
 for 12GB VRAM:
 
-Action  | link                                                                                                                              | save to
----     |---                                                                                                                                | ---
-GETFILE | https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_qwen_image.json   | ComfyUI/user/default/workflows
-GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors  | ComfyUI/models/diffusion_models/
+Action  | link                                                                                                                                          | save to
+---     |---                                                                                                                                            | ---
+GETFILE | https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_qwen_image.json                                         | ComfyUI/user/default/workflows
+GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_fp8_e4m3fn.safetensors               | ComfyUI/models/diffusion_models/
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/non_official/diffusion_models/qwen_image_distill_full_fp8_e4m3fn.safetensors | ComfyUI/models/diffusion_models/
-GETFILE | https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors  | ComfyUI/models/loras
-GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors | ComfyUI/models/vae
-GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors | ComfyUI/models/text_encoders
+GETFILE | https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Lightning-8steps-V1.1.safetensors                                | ComfyUI/models/loras
+GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors                                   | ComfyUI/models/vae
+GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors              | ComfyUI/models/text_encoders
 
 
 The model used above is FP8, which works on 12GB VRAM already (16GB is better). if you have 24GB you can load the bf16 model from: https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/tree/main/split_files/diffusion_models
@@ -95,17 +112,17 @@ CLONEIT | https://github.com/city96/ComfyUI-GGUF                                
 
 ## WAN2.2 AIO (uncensored)
 
-AIO comes as uncensored.
+AIO comes as uncensored. This model was made by someone named Phr00t. 
 You can switch between Text2Video and Image2Video by switching the model to be loaded.
 
 Action  | link                                                                                                                              | save to
 ---     |---                                                                                                                                | ---
-GETFILE |https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_wan2.2-ti2v-aio_uncensored.json | ComfyUI/user/default/workflows
-GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-i2v-rapid-aio-v8.safetensors | ComfyUI/models/checkpoints
-GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-t2v-rapid-aio-v8.1.safetensors | ComfyUI/models/checkpoints
-GETFILE |https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors | ComfyUI/models/clip_vision
-CLONEIT |https://github.com/city96/ComfyUI-GGUF | ComfyUI/custom_nodes
-m
+GETFILE |https://raw.githubusercontent.com/loscrossos/comfy_workflows/refs/heads/main/comfy_wf_wan2.2-ti2v-aio_uncensored.json              | ComfyUI/user/default/workflows
+GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-i2v-rapid-aio-v8.safetensors                        | ComfyUI/models/checkpoints
+GETFILE |https://huggingface.co/Phr00t/WAN2.2-14B-Rapid-AllInOne/resolve/main/v8/wan2.2-t2v-rapid-aio-v8.1.safetensors                      | ComfyUI/models/checkpoints
+GETFILE |https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/resolve/main/split_files/clip_vision/clip_vision_h.safetensors         | ComfyUI/models/clip_vision
+CLONEIT |https://github.com/city96/ComfyUI-GGUF                                                                                             | ComfyUI/custom_nodes
+
 
 ### Benchmark
 640x640, 4Steps, length: 81
