@@ -67,9 +67,9 @@ GGUF Q4_K_M, Resolution: 1328x1328, Sampler: 25 Steps
 
 this workflow accepts safetensors or GGUF. 
 
-basically both workflows share all models but the main mode.the only difference is the model loader (safetebsor loader or gguf losder)
-here i present tha workflow that accepts both but  only put the links online for the gguf, since its more efficient.
-If you want to use safetensors just downllad rbe mekk
+basically both workflows share all models but the main mode.the only difference is the model loader (safetensor loader or gguf loader)
+here i present tha workflow that accepts both but i only put the links online for the gguf, since its more efficient.
+If you want to use safetensors just download the model from the official comfyui Huggingface site. I do not reccomend it. gguf is better.
 
 Action  | link                                                                                                                              | save to
 ---     |---                                                                                                                                | ---
