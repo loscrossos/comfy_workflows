@@ -21,8 +21,11 @@ check this if in doubt: https://docs.comfy.org/installation/update_comfyui
 ### Overview Info
 
 There are currently 2 main ways to use qwen on low vram: the safetensors models and the GGUF version.
-For Qwen models. ComfyUI has official "Safetensors" FP8 workflows. On this repo you will find the guide for the GGUF versions. Why GGUF? by choosing quantizations sizes you can use the models on cards with less VRAM. Down to 6GB.
-In my experience a good gguf has better quality on the same hardware. so i reccomend using that.
+For Qwen models. ComfyUI has official "Safetensors" FP8 workflows. On this repo you will find the guide for the GGUF versions. Why GGUF? In my experience a good gguf has better quality on the same hardware. so i reccomend using that.  But for some people more importantly: by choosing quantizations sizes you can use the models on cards with less VRAM. Down to 6GB. The links are set for 16GB VRAM. if you have less or more go to the GGUF page and download the gguf file that best matches your VRAM size.
+
+e.g. you have 6GB VRAM then a GGUF with less than 8GB size (r.g. 7.4GB) will be needed.
+
+
 
 All Benchmarks on Torch 2.7.1, Sage-Attention 2.2. RTX 5060ti
 
@@ -101,6 +104,10 @@ GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split
 GETFILE | https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors  	                    |ComfyUI/models/vae  
 CLONEIT | https://github.com/city96/ComfyUI-GGUF                                                                                            |ComfyUI/custom_nodes 
  
+
+if you need a lower size gguf you can get it here:
+
+https://huggingface.co/QuantStack/Qwen-Image-Edit-GGUF/tree/main
 
 ### Benchmark
 
